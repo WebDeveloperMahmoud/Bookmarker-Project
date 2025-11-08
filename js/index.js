@@ -94,6 +94,19 @@ inputTxt.addEventListener("input", function () {
 inputTxt.addEventListener("change", function () {
     this.style.boxShadow = "none";
 })
+inputTxt.addEventListener("blur", function () {
+    if (this.value.length < 3) {
+        this.style.boxShadow = "0 0 8px 5px #f58d98ff";
+        this.style.border = "1px solid #f58d98ff";
+        iconStatus1.style.display = "block";
+        iconStatus1.className ="fa-solid fa-circle-exclamation position-absolute text-danger me-2";
+    } else {
+        this.style.boxShadow = "0 0 8px 5px #76ac94ff";
+        this.style.border = "1px solid #76ac94ff";
+        iconStatus1.style.display = "block";
+        iconStatus1.className ="fa-solid fa-check position-absolute text-success me-2";
+    }
+});
 inputUrl.addEventListener("input", function () {
     if (!regexUrl.test(this.value)) {
         this.style.boxShadow = "0 0 8px 5px #f58d98ff";
