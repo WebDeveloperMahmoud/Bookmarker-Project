@@ -1,0 +1,85 @@
+body {
+    padding: 45px 0;
+    background-color: #f8ecde;
+}
+h1 {
+    width: fit-content;
+    font-family: "Pacifico", "cursive";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: #352E28;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    background-color: #fec260;
+    width: 100%;
+    height: 35%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+h1:hover::after {
+    height: 65%;
+}
+.middile {
+    margin-top: 70px;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+    padding: 20px 10px;
+}
+.middile h2 {
+    font-size: 25px;
+    background: linear-gradient(90deg ,#109748f8,#b2ff59fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.middile input:focus {
+    box-shadow: 0 0 8px 5px #f1bc65;
+    border: 1px solid #f6ba59;
+}
+.middile input::placeholder{
+    font-weight: 500;
+    color: #48423da6;
+}
+.middile input {
+    font-weight: 600;
+    transition:  0.3s;
+}
+table th{
+    padding: 10px;
+    width: calc(100%/5);
+}
+table tbody tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.615);
+}
+table tbody tr td {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 450;
+}
+.swal2-popup {
+    font-family: "Poppins", sans-serif;
+    border-radius: 15px !important;
+}
+
+.swal2-title {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+}
+
+.swal2-html-container {
+    font-size: 1rem !important;
+    text-align: left;
+    padding: 30px 25px 0 25px;
+}
+#iconStatus1,
+#iconStatus2 {
+    right: 0;
+    top: 50%;
+    transform: translateY(50%);
+    pointer-events: none;
+    color: transparent;
+}
