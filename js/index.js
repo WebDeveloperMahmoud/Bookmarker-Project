@@ -78,36 +78,46 @@ form.addEventListener("submit", (e) => {
     inputTxt.style.border = "1px solid #e4e0da";
     inputUrl.style.border = "1px solid #e4e0da";
 });
-inputTxt.addEventListener("input", function () {
-    if (this.value.length < 3) {
+function inputTextCall() {
+    inputTxt.addEventListener("input", function () {
+      if (this.value.length < 3) {
         this.style.boxShadow = "0 0 8px 5px #f58d98ff";
         this.style.border = "1px solid #f58d98ff";
         iconStatus1.style.display = "block";
-        iconStatus1.className ="fa-solid fa-circle-exclamation position-absolute text-danger me-2";
-    } else {
+        iconStatus1.className =
+          "fa-solid fa-circle-exclamation position-absolute text-danger me-2";
+      } else {
         this.style.boxShadow = "0 0 8px 5px #76ac94ff";
         this.style.border = "1px solid #76ac94ff";
         iconStatus1.style.display = "block";
-        iconStatus1.className ="fa-solid fa-check position-absolute text-success me-2";
-    }
-});
-inputTxt.addEventListener("change", function () {
-    this.style.boxShadow = "none";
-})
-inputUrl.addEventListener("input", function () {
+        iconStatus1.className =
+          "fa-solid fa-check position-absolute text-success me-2";
+      }
+    });
+    inputTxt.addEventListener("change", function () {
+        this.style.boxShadow = "none";
+    });
+}
+inputTextCall();
+function inputUrlCall() {
+    inputUrl.addEventListener("input", function () {
     if (!regexUrl.test(this.value)) {
         this.style.boxShadow = "0 0 8px 5px #f58d98ff";
         this.style.border = "1px solid #f58d98ff";
-        iconStatus2.className ="fa-solid fa-circle-exclamation position-absolute text-danger me-2";
-    } else {
+        iconStatus2.style.display = "block";
+        iconStatus2.className = "fa-solid fa-circle-exclamation position-absolute text-danger me-2";
+        } else {
         this.style.boxShadow = "0 0 8px 5px #76ac94ff";
         this.style.border = "1px solid #76ac94ff";
+        iconStatus2.style.display = "block";
         iconStatus2.className ="fa-solid fa-check position-absolute text-success me-2";
-    }
-});
-inputUrl.addEventListener("change", function () {
-    this.style.boxShadow = "none";
-});
+        }
+    });
+    inputUrl.addEventListener("change", function () {
+      this.style.boxShadow = "none";
+    });
+}
+inputUrlCall();
 function clearIconAfterDisplay() {
     iconStatus1.style.display = "none";
     iconStatus2.style.display = "none";
@@ -134,6 +144,10 @@ function displaySite() {
 function clearInputAfterDisplay() {
     inputTxt.value = "";
     inputUrl.value = "";
+    inputTxt.style.border = "";
+    inputTxt.style.boxShadow = "";
+    inputUrl.style.border = "";
+    inputUrl.style.boxShadow = "";
 }
 function deleteSite(index) {
     sites.splice(index, 1);
