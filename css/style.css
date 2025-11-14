@@ -64,6 +64,9 @@ table tbody tr td {
     .container {
         max-width: 95% !important;
     }
+    thead tr th {
+        font-size: 14px !important;
+    }
     tbody tr td a {
         font-size: 15px !important;
     }
