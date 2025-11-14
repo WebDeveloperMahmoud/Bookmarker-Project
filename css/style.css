@@ -1,6 +1,10 @@
+html {
+    overflow-x: auto;
+}
 body {
     padding: 45px 0;
     background-color: #f8ecde;
+    overflow-x: auto;
 }
 h1 {
     width: fit-content;
