@@ -1,9 +1,9 @@
-* {
+/* * {
     outline: 1px solid red !important;
-}
-html {
+} */
+/* html {
     overflow-x: auto;
-}
+} */
 body {
     padding: 45px 0;
     background-color: #f8ecde;
