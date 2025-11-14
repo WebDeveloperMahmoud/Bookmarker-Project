@@ -60,6 +60,18 @@ table tbody tr td {
     font-size: 18px;
     font-weight: 450;
 }
+@media (max-width:768px) {
+    .container {
+        max-width: 95% !important;
+    }
+    tbody tr td a {
+        font-size: 15px !important;
+    }
+    tbody tr td button {
+        font-size: 14px !important;
+        padding: 8px 10px !important;
+    }
+}
 .swal2-popup {
     font-family: "Poppins", sans-serif;
     border-radius: 15px !important;
