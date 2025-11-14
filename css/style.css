@@ -62,8 +62,8 @@ table tbody tr td {
 }
 @media (max-width:768px) {
     .container {
-        max-width: 95% !important;
-        margin: auto !important;
+        max-width: 100% !important;
+        padding: 0 10px;
     }
     thead tr th {
         font-size: 14px !important;
